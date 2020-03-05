@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-        const weapons=[ {
+    const weapons = [{
             "name": "44_pistol",
             "damage": 48,
             "ammo": 21,
@@ -12,7 +12,7 @@ $(document).ready(function () {
         }
 
         ,
-            {
+        {
             "name": "10mm_pistol",
             "damage": 18,
             "ammo": 93,
@@ -24,7 +24,7 @@ $(document).ready(function () {
         }
 
         ,
-            {
+        {
             "name": "assalut_rifle",
             "damage": 30,
             "ammo": 103,
@@ -36,7 +36,7 @@ $(document).ready(function () {
         }
 
         ,
-            {
+        {
             "name": "pipe_gun",
             "damage": 13,
             "ammo": 52,
@@ -48,7 +48,7 @@ $(document).ready(function () {
         }
 
         ,
-            {
+        {
             "name": "minigun",
             "damage": 8,
             "ammo": 505,
@@ -59,36 +59,67 @@ $(document).ready(function () {
             "value": 382
         }
 
-        ] 
-        
-        $(".item-list a").on("click", function(event){
-            $(".item-list a").removeClass("active");
-            $(event.currentTarget).addClass("active")
-        })
+    ]
+
+    const specialDescription = [
+        {name:"strength",
+        description:"Some Strength description here..." },
+        {name:"perception",
+        description:"Some Perception description here..." },
+        {name:"endurance",
+        description:"Some Endurance description here..." },
+        {name:"charism",
+        description:"Some Charism description here..." },
+        {name:"intelligence",
+        description:"Some Intelligence description here..." },
+        {name:"agility",
+        description:"Some Agility description here..." },
+        {name:"luck",
+        description:"Some Luck description here..." },
+    ]
+
+    $(".item-list a").on("click", function (event) {
+        $(".item-list a").removeClass("active");
+        $(event.currentTarget).addClass("active")
+    })
 
 
 
-        $(".item-list a").on("mouseover", function (event) {
-                let currentItem=($(event.currentTarget).attr("class"));
+    $(".item-list a").on("mouseover", function (event) {
+        let currentItem = ($(event.currentTarget).attr("class"));
 
-                for (item in weapons) {
-                    if (weapons[item].name==currentItem) {
+        for (item in weapons) {
+            if (weapons[item].name == currentItem) {
 
-                        
-                        $(".damage").html(weapons[item].damage)
-                        $(".ammo").html(weapons[item].ammo)
-                        $(".fire_rate").html(weapons[item].fire_rate)
-                        $(".range").html(weapons[item].range)
-                        $(".accuracy").html(weapons[item].accuracy)
-                        $(".weight").html(weapons[item].weight)
-                        $(".value").html(weapons[item].value)
-                    }
-                        
-                }
 
+                $(".damage").html(weapons[item].damage)
+                $(".ammo").html(weapons[item].ammo)
+                $(".fire_rate").html(weapons[item].fire_rate)
+                $(".range").html(weapons[item].range)
+                $(".accuracy").html(weapons[item].accuracy)
+                $(".weight").html(weapons[item].weight)
+                $(".value").html(weapons[item].value)
             }
 
-        )
-    }
+        }
 
-)
+    })
+
+    $(".special-list div").on("mouseover", function (event) {
+        currentImage = ($(event.currentTarget).attr("name"));
+
+        if (currentImage !== undefined){
+            $(".special-img").attr("src",currentImage + ".png")
+
+            for (item in specialDescription){
+                if(specialDescription[item].name == currentImage){
+                $(".description").html(specialDescription[item].description)
+                }
+            }
+        }
+
+
+    })
+
+
+})

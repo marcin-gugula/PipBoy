@@ -7,6 +7,7 @@ body {
     color: #14fe17;
     background: #272b23;
     font-family: Pipboy, sans-serif;
+    min-width: 1000px;
 }
 
 body::after {
@@ -22,7 +23,9 @@ body::after {
     pointer-events: none;
     z-index: 1000;
 }
-
+a {
+    color: #14fe17;
+}
 .nav {
     width: calc(100% - 20px);
 }
@@ -174,6 +177,7 @@ body::after {
     width: calc(100%);
     margin: 10px;
     font-size: 20px;
+    min-width: 1000px;
 }
 
 .pipboy-footer {
@@ -224,13 +228,13 @@ body::after {
 }
 
 
-.item-list {
+.item-list, .special-list {
     width: 100%;
     list-style: none;
     margin: 10px;
 }
 
-.item-list li a {
+.item-list li a{
     display: block;
     width: 300px;
     color: #14fe17;
@@ -239,9 +243,33 @@ body::after {
     text-decoration: none;
 }
 
-.item-list li a:hover {
+.special-list .row{
+    width: 400px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px;
+    /* margin-left: 20px; */
+    font-size: 26px;
+}
+
+.special-img{
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    margin-top: 100px;
+    filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(7) brightness(1) contrast(1);
+}
+
+.description{
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+
+.item-list li a:hover, .special-list .row:hover {
     background: #14fe17;
-    color: #272b23;
+    color: #272b23 !important;
+    
 
 }
 
@@ -273,3 +301,5 @@ body::after {
 .item-list a.active:hover::before{
     background: #272b23;
 }
+
+
