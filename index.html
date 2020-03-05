@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/pipboy.css">
+    <title>PipBoy</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-top navbar-light>">
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="nav nav-pills nav-fill">
+                <li class="nav-item active">
+                    <a href="index.html" class="nav-link">STAT</a>
+                </li>
+                <li class="nav-item">
+                    <a href="item.html" class="nav-link">INV</a>
+                </li>
+                <li class="nav-item ">
+                    <a href="#" class="nav-link">DATA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">MAP</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">RADIO</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a href="#status" class="nav-link" data-toggle="tab" role="tab">STATUS</a>
+        </li>
+        <li class="nav-item">
+            <a href="#special" class="nav-link" data-toggle="tab" role="tab">SPECIAL</a>
+        </li>
+        <li class="nav-item">
+            <a href="#perks" class="nav-link" data-toggle="tab" role="tab">PERKS</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade active" id="status" role="tabpanel">
+
+            <div class="center-image"><img src="vault-boy.png" alt=""></div>
+
+            <div class="stat-bars">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="status-bar">
+                            <div class="level-progress">
+                                <div class="level-progress-indicator w-90"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3">
+                        <div class="status-bar">
+                            <div class="level-progress">
+                                <div class="level-progress-indicator"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                    </div>
+                    <div class="col-3">
+                        <div class="status-bar">
+                            <div class="level-progress">
+                                <div class="level-progress-indicator w-75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3">
+                        <div class="status-bar">
+                            <div class="level-progress">
+                                <div class="level-progress-indicator w-30"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                    </div>
+                    <div class="col-3">
+                        <div class="status-bar">
+                            <div class="level-progress">
+                                <div class="level-progress-indicator w-90"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="status-bar">
+                            <div class="level-progress">
+                                <div class="level-progress-indicator w-75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row stat-numbers">
+                <div class="col-2 transparent"></div>
+                <div class="col-2"><img src="gun.png" class="stat-img" alt=""></div>
+                <div class="col-1">
+                    <div class="icon"><img src="crosshair.png" class="stat-icon" alt=""></div>
+                    <div class="points">18</div>
+                </div>
+                <div class="col-1 transparent"></div>
+
+
+                <div class="col-2"><img src="helmet.png" class="stat-img" alt=""></div>
+                <div class="col-1">
+                    <div class="icon"><img src="energy.png" class="stat-icon" alt=""></div>
+                    <div class="points" >18</div>
+                </div>
+                <div class="col-1">
+                    <div class="icon"><img src="radiation.png" class="stat-icon" alt=""></div>
+                    <div class="points">18</div>
+                </div>
+                <div class="col-2 transparent"></div>
+
+
+
+
+            </div>
+
+        </div>
+        <div class="tab-pane fade" id="special" role="tabpanel">
+            SPECIAL
+        </div>
+        <div class="tab-pane fade" id="perks" role="tabpanel">
+            PERKS
+        </div>
+
+    </div>
+
+
+    <nav class="navbar navbar-expand-sm navbar-light nav-footer ">
+        <div class="row pipboy-footer ">
+            <div class="col-3">HP 70/90</div>
+            <div class="col-6">LEVEL 1
+                <div class="level-progress">
+                    <div class="level-progress-indicator"></div>
+                </div>
+            </div>
+            <div class="col-3 text-right">AP 40/50</div>
+        </div>
+    </nav>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="js/pipboy.js"></script>
+</body>
+
+</html>

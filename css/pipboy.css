@@ -1,0 +1,275 @@
+@font-face {
+    font-family: Pipboy;
+    src: "../monofonto.ttf";
+}
+
+body {
+    color: #14fe17;
+    background: #272b23;
+    font-family: Pipboy, sans-serif;
+}
+
+body::after {
+    height: 100%;
+    width: 100%;
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4) 1px,
+            transparent 1px, transparent 2px);
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.nav {
+    width: calc(100% - 20px);
+}
+
+.navbar-top {
+    border-bottom: 2px solid #14fe17 !important;
+    margin: 0 10px;
+    font-size: 32px;
+    line-height: 20px;
+    padding: 10px 100px;
+}
+
+.navbar-top::before,
+.navbar-top::after {
+    height: 7px;
+    width: 2px;
+    content: "";
+    position: absolute;
+    display: block;
+    background: #14fe17;
+    bottom: -8px;
+
+}
+
+.navbar-top::before {
+    left: 0px;
+}
+
+.navbar-top::after {
+    right: 0px;
+}
+
+
+.nav-link {
+    color: #14fe17;
+    background: #272b23;
+    position: relative;
+    z-index: 100;
+    width: 130px;
+    margin: auto;
+    border: none;
+}
+
+.nav-link:hover {
+    color: #14fe17;
+}
+
+.nav-fill .nav-item {
+    position: relative;
+    width: 110px;
+
+}
+
+.nav-item.active::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 28px;
+    background: #272b23;
+    top: 18px;
+    left: 0px;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-top: 2px solid;
+    z-index: 10;
+}
+
+.nav-link.active {
+    background: #272b23 !important;
+    border: transparent;
+    color: #14fe17 !important;
+}
+
+
+
+.nav-tabs {
+
+    border: none;
+    font-size: 24px;
+}
+
+.nav-tabs .nav-item {
+    margin: 0 50px;
+}
+
+
+.nav-link:hover {
+    border: none;
+}
+
+.center-image {
+    position: absolute;
+    width: 100%;
+    left: -10px;
+}
+
+.center-image img {
+    margin: auto;
+    margin-top: 0px;
+    display: block;
+    position: relative;
+    max-height: 300px;
+    margin-top: 50px;
+    filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(7) brightness(1) contrast(1);
+}
+
+.status-bar {
+    width: 60px;
+    margin: auto;
+}
+
+.stat-bars .row {
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+
+.stat-numbers .col-1,
+.stat-numbers .col-2 {
+    background: rgba(16, 255, 0, 0.2);
+    margin-right: 4px;
+    margin-top: -50px;
+}
+
+.col-1.transparent,
+.col-2.transparent {
+    background: transparent;
+}
+
+.stat-img {
+    width: 100%;
+    filter: grayscale(1) brightness(200) contrast(0) sepia(100%) hue-rotate(55deg) saturate(20);
+    padding-top: 2px;
+}
+
+.stat-icon {
+    width: 20px;
+    margin-left: -6px;
+    filter: grayscale(1) brightness(200) contrast(0) sepia(100%) hue-rotate(55deg) saturate(20);
+}
+
+.points {
+    margin-left: -6px;
+}
+
+.nav-footer {
+    position: fixed;
+    bottom: 0;
+    width: calc(100%);
+    margin: 10px;
+    font-size: 20px;
+}
+
+.pipboy-footer {
+    width: 102%;
+}
+
+.pipboy-footer .col-3,
+.pipboy-footer .col-6 {
+    background: rgba(16, 255, 0, 0.2);
+    padding: 5px 10px;
+}
+
+
+.pipboy-footer .col-6 {
+    margin: 0 5px;
+    flex: 0 0 48%;
+}
+
+.level-progress {
+    display: inline-block;
+    width: 70%;
+    height: 10px;
+    border: 2px solid;
+}
+
+.level-progress-indicator {
+    height: 6px;
+    background: #14fe17;
+    position: relative;
+    width: 60%;
+}
+
+.status-bar .w-75 {
+    width: 75%;
+}
+
+.status-bar .w-30 {
+    width: 30%;
+}
+
+.status-bar .w-100 {
+    width: 75%;
+}
+
+#status {
+    width: 400px;
+    margin: auto;
+}
+
+
+.item-list {
+    width: 100%;
+    list-style: none;
+    margin: 10px;
+}
+
+.item-list li a {
+    display: block;
+    width: 300px;
+    color: #14fe17;
+    padding: 5px 20px;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.item-list li a:hover {
+    background: #14fe17;
+    color: #272b23;
+
+}
+
+.item-stats{
+    font-size: 20px;
+    width: 200px;
+    position: absolute;
+    right: 100px;
+    bottom: 130px;
+    }
+
+.item-stats .row{
+    background: rgba(16, 255, 0, 0.2);
+    padding: 3px;
+    margin-bottom: 3px;
+}
+
+.item-list a.active::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #14fe17;
+    left: 55px;
+    margin-top: 7px;
+}
+
+.item-list a.active:hover::before{
+    background: #272b23;
+}
