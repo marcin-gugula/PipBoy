@@ -96,7 +96,31 @@ $(document).ready(function () {
             "weight": 7,
             "value": 12
         }
+    ]
 
+
+    const aids = [{
+            "name": "stimpak",
+            "effects": "+30% Hit Points",
+            "weight": 0.01,
+            "value": 48
+        }
+
+        ,
+        {
+            "name": "corn",
+            "effects": "+10 Hit Points <br/> +3 Radiation",
+            "weight": 0.01,
+            "value": 6
+        }
+
+        ,
+        {
+            "name": "potato_crisps",
+            "effects": "+10 Hit Points <br/> +7 Radiation",
+            "weight": 0.02,
+            "value": 7
+        }
 
     ]
 
@@ -200,7 +224,7 @@ $(document).ready(function () {
 
 
     $(".item-list a").on("mouseover", function (event) {
-        let currentItem = ($(event.currentTarget).attr("class"));
+        let currentItem = ($(event.currentTarget).attr("name"));
 
         for (item in weapons) {
             if (weapons[item].name == currentItem) {
@@ -219,8 +243,8 @@ $(document).ready(function () {
     })
 
 
-    $(".armors-list a").on("mouseover", function (event) {
-        let currentItem = ($(event.currentTarget).attr("class"));
+    $(".armor-list a").on("mouseover", function (event) {
+        let currentItem = ($(event.currentTarget).attr("name"));
 
         for (item in armors) {
             if (armors[item].name == currentItem) {
@@ -235,6 +259,22 @@ $(document).ready(function () {
 
     })
 
+
+    $(".aid-list a").on("mouseover", function (event) {
+        let currentItem = ($(event.currentTarget).attr("name"));
+
+        for (item in aids) {
+            if (aids[item].name == currentItem) {
+
+                $(".aid_effects").html(aids[item].effects)
+                $(".aid_weight").html(aids[item].weight)
+                $(".aid_value").html(aids[item].value)
+            }
+
+        }
+
+    })
+
     $(".special-list div").on("mouseover", function (event) {
         currentImage = ($(event.currentTarget).attr("name"));
 
@@ -243,7 +283,7 @@ $(document).ready(function () {
 
             for (item in specialDescription) {
                 if (specialDescription[item].name == currentImage) {
-                    $(".description").html(specialDescription[item].description)
+                    $(".description_special").html(specialDescription[item].description)
                 }
             }
         }
@@ -258,9 +298,9 @@ $(document).ready(function () {
         if (currentImage !== undefined) {
             $(".perk-img").attr("src", "images/" + currentImage + ".png")
 
-            for (item in perkDescription) {
-                if (perkDescription[item].name == currentImage) {
-                    $(".description").html(perkDescription[item].description)
+            for (item in perksDescription) {
+                if (perksDescription[item].name == currentImage) {
+                    $(".description_perks").html(perksDescription[item].description)
                 }
             }
         }

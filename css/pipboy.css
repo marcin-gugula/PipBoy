@@ -30,7 +30,7 @@ a {
 }
 
 p {
-    max-width: 500px;
+    max-width: 600px;
     margin: auto;
 }
 
@@ -248,12 +248,16 @@ p {
     margin: auto;
 }
 
-#weapons, #armor {
+#weapons, #armor, #aid {
     width: 70%;
+}
+#special, #perks {
+    width: 95%;
 }
 
 .item-list,
 .armor-list,
+.aid-list,
 .special-list,
 .perk-list {
     width: 100%;
@@ -262,7 +266,8 @@ p {
 }
 
 .item-list li a,
-.armor-list li a {
+.armor-list li a,
+.aid-list li a  {
     margin: 5px;
     font-size: 20px;
     display: block;
@@ -275,31 +280,32 @@ p {
 
 .special-list .row,
 .perk-list .row {
-    width: 400px;
-    margin: auto;
+    margin-left: 50px;
     margin-top: 30px;
     padding: 10px;
-    /* margin-left: 20px; */
     font-size: 26px;
 }
+   
 
 .special-img,
 .perk-img {
     height: 350px;
     width: 350px;
+    margin-left: 20%;
     margin-top: 100px;
-    margin-left: 15%;
     filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(7) brightness(1) contrast(1);
 }
 
-.description {
-    margin-top: 50px;
+.description_special, .description_perks {
+    margin-top: 70px;
     font-size: 20px;
+    margin-left: 20%;
 }
 
 
 .item-list li a:hover,
 .armor-list li a:hover,
+.aid-list li a:hover,
 .special-list .row:hover,
 .perk-list .row:hover {
     background: #14fe17;
@@ -309,7 +315,9 @@ p {
 }
 
 .item-stats,
-.armor-stats {
+.armor-stats,
+.aid-stats
+ {
     font-size: 20px;
     width: 300px;
     position: absolute;
@@ -318,14 +326,16 @@ p {
 
 
 .item-stats .row,
-.armor-stats .row {
+.armor-stats .row, 
+.aid-stats .row{
     background: rgba(16, 255, 0, 0.2);
     padding: 3px;
     margin-bottom: 3px;
 }
 
 .item-list a.active::before,
-.armor-list a.active::before {
+.armor-list a.active::before
+{
     content: "";
     display: block;
     position: absolute;
