@@ -7,7 +7,7 @@ body {
     color: #14fe17;
     background: #272b23;
     font-family: Pipboy, sans-serif;
-    
+
 }
 
 body::after {
@@ -24,15 +24,17 @@ body::after {
     pointer-events: none;
     z-index: 1000;
 }
+
 a {
     color: #14fe17;
 }
-p{
+
+p {
     max-width: 500px;
     margin: auto;
 }
 
-.pipboy{
+.pipboy {
     min-width: 900px;
     max-width: 1300px;
     margin: auto;
@@ -246,26 +248,33 @@ p{
     margin: auto;
 }
 
-#weapons{
+#weapons, #armor {
     width: 70%;
 }
 
-.item-list, .special-list, .perk-list {
+.item-list,
+.armor-list,
+.special-list,
+.perk-list {
     width: 100%;
     list-style: none;
     margin: 10px;
 }
 
-.item-list li a{
+.item-list li a,
+.armor-list li a {
+    margin: 5px;
+    font-size: 20px;
     display: block;
     width: 300px;
     color: #14fe17;
-    padding: 5px 20px;
+    padding: 8px 20px;
     border-radius: 2px;
     text-decoration: none;
 }
 
-.special-list .row, .perk-list .row{
+.special-list .row,
+.perk-list .row {
     width: 400px;
     margin: auto;
     margin-top: 30px;
@@ -274,7 +283,8 @@ p{
     font-size: 26px;
 }
 
-.special-img, .perk-img{
+.special-img,
+.perk-img {
     height: 350px;
     width: 350px;
     margin-top: 100px;
@@ -282,34 +292,40 @@ p{
     filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(7) brightness(1) contrast(1);
 }
 
-.description{
+.description {
     margin-top: 50px;
     font-size: 20px;
 }
 
 
-.item-list li a:hover, .special-list .row:hover, .perk-list .row:hover {
+.item-list li a:hover,
+.armor-list li a:hover,
+.special-list .row:hover,
+.perk-list .row:hover {
     background: #14fe17;
     color: #272b23 !important;
-    
+
 
 }
 
-.item-stats{
+.item-stats,
+.armor-stats {
     font-size: 20px;
-    width: 200px;
-    position: relative;
+    width: 300px;
+    position: absolute;
     top: 400px;
-    left: 100px;
-    }
+}
 
-.item-stats .row{
+
+.item-stats .row,
+.armor-stats .row {
     background: rgba(16, 255, 0, 0.2);
     padding: 3px;
     margin-bottom: 3px;
 }
 
-.item-list a.active::before{
+.item-list a.active::before,
+.armor-list a.active::before {
     content: "";
     display: block;
     position: absolute;
@@ -317,12 +333,11 @@ p{
     height: 10px;
     background: #14fe17;
     left: 40px;
-    margin-top: 7px;
-    margin-left: 25px;
+    margin-top: 9px;
+    margin-left: 34px;
 }
 
-.item-list a.active:hover::before{
+.item-list a.active:hover::before,
+.armor-list a.active:hover::before {
     background: #272b23;
 }
-
-
