@@ -63,20 +63,39 @@ $(document).ready(function () {
 
     const specialDescription = [
         {name:"strength",
-        description:"Some Strength description here..." },
+        description:"A measure of your raw physical power. It affects how much you can carry and the damage of all melee attacks." },
         {name:"perception",
-        description:"Some Perception description here..." },
+        description:"Perception is a measurement of your environmental and situational awareness. It directly affects weapon accuracy in V.A.T.S. (Vault-Tec Assisted Targeting System), lock-picking skills, and successful attempts at stealing items." },
         {name:"endurance",
-        description:"Some Endurance description here..." },
+        description:"A measure of your overall physical fitness. It affects your total Health and the Action Point drain from sprinting." },
         {name:"charism",
-        description:"Some Charism description here..." },
+        description:"	Your ability to charm and convince others. It affects your success to persuade in dialogue, prices when you barter, and the maximum number of settlers in settlements." },
         {name:"intelligence",
-        description:"Some Intelligence description here..." },
+        description:"	A measure of your overall mental acuity. It affects the number of Experience Points earned and reduces the number of dud words when hacking terminals." },
         {name:"agility",
-        description:"Some Agility description here..." },
+        description:"A measure of your overall finesse and reflexes. It affects the number of Action Points in V.A.T.S. and your ability to sneak." },
         {name:"luck",
-        description:"Some Luck description here..." },
+        description:"	A measure of your general good fortune and affects the recharge rate of critical hits." },
     ]
+
+
+    const perksDescription = [
+    {name:"big_leagues",
+    description:"Swing for the fences! Do 20% more melee weapon damage."},
+    {name:"heavy_gunner",
+    description:"Thanks to practice and conditioning, heavy guns do 20% more damage."},
+    {name:"awareness",
+    description:"To defeat your enemies, know their weaknesses! You can view a target's specific damage resistances in V.A.T.S."},
+    {name:"cap_collector",
+    description:"You've mastered the art of the deal! Buying and selling prices at vendors are better."},
+    {name:"medic",
+    description:"Is there a doctor in the house? Stimpaks restore 40% of lost Health, and RadAway removes 40% of radiation.	"},
+    {name:"mysterious_stranger",
+    description:"Who is he? Why does he help? Who cares! The Mysterious Stranger will appear occasionally in V.A.T.S. to lend a hand, with deadly efficiency..."},
+]
+
+
+
 
     $(".item-list a").on("click", function (event) {
         $(".item-list a").removeClass("active");
@@ -109,11 +128,28 @@ $(document).ready(function () {
         currentImage = ($(event.currentTarget).attr("name"));
 
         if (currentImage !== undefined){
-            $(".special-img").attr("src",currentImage + ".png")
+            $(".special-img").attr("src","images/" + currentImage + ".png")
 
             for (item in specialDescription){
                 if(specialDescription[item].name == currentImage){
                 $(".description").html(specialDescription[item].description)
+                }
+            }
+        }
+
+
+    })
+
+
+    $(".perk-list div").on("mouseover", function (event) {
+        currentImage = ($(event.currentTarget).attr("name"));
+
+        if (currentImage !== undefined){
+            $(".perk-img").attr("src","images/" + currentImage + ".png")
+
+            for (item in perkDescription){
+                if(perkDescription[item].name == currentImage){
+                $(".description").html(perkDescription[item].description)
                 }
             }
         }

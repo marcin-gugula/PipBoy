@@ -7,12 +7,13 @@ body {
     color: #14fe17;
     background: #272b23;
     font-family: Pipboy, sans-serif;
-    min-width: 1000px;
+    
 }
 
 body::after {
     height: 100%;
     width: 100%;
+    min-width: 950px;
     content: "";
     position: absolute;
     left: 0px;
@@ -26,6 +27,18 @@ body::after {
 a {
     color: #14fe17;
 }
+p{
+    max-width: 500px;
+    margin: auto;
+}
+
+.pipboy{
+    min-width: 900px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+
 .nav {
     width: calc(100% - 20px);
 }
@@ -35,7 +48,7 @@ a {
     margin: 0 10px;
     font-size: 32px;
     line-height: 20px;
-    padding: 10px 100px;
+    padding: 10px 60px;
 }
 
 .navbar-top::before,
@@ -171,17 +184,23 @@ a {
     margin-left: -6px;
 }
 
+/* .tab-content{
+    height: 700px;
+} */
+
 .nav-footer {
-    position: fixed;
-    bottom: 0;
-    width: calc(100%);
-    margin: 10px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    margin: auto;
     font-size: 20px;
-    min-width: 1000px;
+    min-width: 900px;
+    max-width: 1300px;
 }
 
 .pipboy-footer {
     width: 102%;
+    margin-left: -2px;
 }
 
 .pipboy-footer .col-3,
@@ -227,8 +246,11 @@ a {
     margin: auto;
 }
 
+#weapons{
+    width: 70%;
+}
 
-.item-list, .special-list {
+.item-list, .special-list, .perk-list {
     width: 100%;
     list-style: none;
     margin: 10px;
@@ -243,7 +265,7 @@ a {
     text-decoration: none;
 }
 
-.special-list .row{
+.special-list .row, .perk-list .row{
     width: 400px;
     margin: auto;
     margin-top: 30px;
@@ -252,11 +274,11 @@ a {
     font-size: 26px;
 }
 
-.special-img{
-    margin: auto;
-    height: 300px;
-    width: 300px;
+.special-img, .perk-img{
+    height: 350px;
+    width: 350px;
     margin-top: 100px;
+    margin-left: 15%;
     filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(7) brightness(1) contrast(1);
 }
 
@@ -266,7 +288,7 @@ a {
 }
 
 
-.item-list li a:hover, .special-list .row:hover {
+.item-list li a:hover, .special-list .row:hover, .perk-list .row:hover {
     background: #14fe17;
     color: #272b23 !important;
     
@@ -276,9 +298,9 @@ a {
 .item-stats{
     font-size: 20px;
     width: 200px;
-    position: absolute;
-    right: 100px;
-    bottom: 130px;
+    position: relative;
+    top: 400px;
+    left: 100px;
     }
 
 .item-stats .row{
@@ -294,8 +316,9 @@ a {
     width: 10px;
     height: 10px;
     background: #14fe17;
-    left: 55px;
+    left: 40px;
     margin-top: 7px;
+    margin-left: 25px;
 }
 
 .item-list a.active:hover::before{
